@@ -76,10 +76,10 @@
                         <ColumnDefinition Width="20*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Image x:Name="btnFullExtent_MapNav"  Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/globe.png" PointerPressed="btnFullExtent_MapNav_PointerPressed" />
-                    <Image x:Name="btnPrevExtent_MapNav"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/previous.png" PointerPressed="btnPrevExtent_MapNav_PointerPressed"   Opacity="{Binding PrevBtnOpacity}"/>
-                    <Image x:Name="btnNextExtent_MapNav"  Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/next.png" PointerPressed="btnNextExtent_MapNav_PointerPressed"  Opacity="{Binding NextBtnOpacity}" />
-                    <Image x:Name="btnAutoNav_MapNav"  Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/accel_icon.png" PointerPressed="btnAutoNav_MapNav_PointerPressed"  Opacity="1" />
+                    <Image x:ConnectionId='9' x:Name="btnFullExtent_MapNav"  Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/globe.png"                                                      />
+                    <Image x:ConnectionId='10' x:Name="btnPrevExtent_MapNav"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/previous.png"                                                        Opacity="{Binding PrevBtnOpacity}"/>
+                    <Image x:ConnectionId='11' x:Name="btnNextExtent_MapNav"  Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/next.png"                                                       Opacity="{Binding NextBtnOpacity}" />
+                    <Image x:ConnectionId='12' x:Name="btnAutoNav_MapNav"  Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/accel_icon.png"                                                    Opacity="1" />
 
 
                     <TextBlock Text="full" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -103,11 +103,11 @@
                         <ColumnDefinition Width="20*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Image x:Name="btnRedDrawPoint" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Point.png" PointerPressed="btnRedDrawPoint_PointerPressed"/>
-                    <Image x:Name="btnRedDrawLine" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Polyline.png" PointerPressed="btnRedDrawLine_PointerPressed"/>
-                    <Image x:Name="btnRedDrawPolygon" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Polygon.png" PointerPressed="btnRedDrawPolygon_PointerPressed"/>
-                    <Image x:Name="btnRedDrawText" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/text.png" PointerPressed="btnRedDrawText_PointerPressed"/>
-                    <Image  x:Name="btnRedSettings" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/edit.png" PointerPressed="btnRedSettings_PointerPressed"/>
+                    <Image x:ConnectionId='4' x:Name="btnRedDrawPoint" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Point.png"                                                />
+                    <Image x:ConnectionId='5' x:Name="btnRedDrawLine" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Polyline.png"                                               />
+                    <Image x:ConnectionId='6' x:Name="btnRedDrawPolygon" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Polygon.png"                                                  />
+                    <Image x:ConnectionId='7' x:Name="btnRedDrawText" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/text.png"                                               />
+                    <Image x:ConnectionId='8'  x:Name="btnRedSettings" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/edit.png"                                               />
 
                     <TextBlock Text="point" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <TextBlock Text="line"   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -133,7 +133,7 @@
                     <Button Content="Button" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <Button Content="Button"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <Button Content="Button" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button x:Name="btnMeasurSet" Content="Button" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" PointerPressed="btnMeasurSet_PointerPressed"/>
+                    <Button x:ConnectionId='3' x:Name="btnMeasurSet" Content="Button" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"                                             />
 
 
                     <TextBlock Text="x,y" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -279,12 +279,12 @@
                     <layers:OpenStreetMapLayer/>
                 </controls:Map>
             </controls:MapView>
-            <Button x:Name="btnMapFullScrn" Content="^" Opacity="0.7" Width="70" Height="70" VerticalAlignment="Top" HorizontalAlignment="Center" PointerPressed="btnMapFullScrn_PointerPressed"/>
+            <Button x:ConnectionId='1' x:Name="btnMapFullScrn" Content="^" Opacity="0.7" Width="70" Height="70" VerticalAlignment="Top" HorizontalAlignment="Center"                                               />
 
 
 
-            <Button x:Name="btnAutoNavBase_MapNav"  Width="30" Height="30" Opacity="0.8" Visibility="Collapsed"
-                    VerticalAlignment="Center" HorizontalAlignment="Center" PointerPressed="btnAutoNavBase_MapNav_PointerPressed">
+            <Button x:ConnectionId='2' x:Name="btnAutoNavBase_MapNav"  Width="30" Height="30" Opacity="0.8" Visibility="Collapsed"
+                    VerticalAlignment="Center" HorizontalAlignment="Center"                                                      >
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="/images/stop.png"/>
@@ -352,13 +352,13 @@
     <Page.BottomAppBar>
         <CommandBar>
             <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Cancel" Icon="Cancel" PointerPressed="AppBarButton_PointerPressed"/>
-                <AppBarButton Label="My Location" Icon="Contact" PointerPressed="AppBarButton_PointerPressed_1"/>
+                <AppBarButton x:ConnectionId='13' Label="Cancel" Icon="Cancel"                                             />
+                <AppBarButton x:ConnectionId='14' Label="My Location" Icon="Contact"                                               />
                 <AppBarButton Label="Search" Icon="Find"/>
                 <AppBarButton Label="Content" Icon="Bullets"/>
             </CommandBar.PrimaryCommands>
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:Name="btnClearMapGraphics" Label="Clear Map" IsEnabled="False" PointerPressed="btnClearMapGraphics_PointerPressed"/>
+                <AppBarButton x:ConnectionId='15' x:Name="btnClearMapGraphics" Label="Clear Map" IsEnabled="False"                                                    />
                 <AppBarButton Label="Pin to start" IsEnabled="True"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
@@ -377,3 +377,4 @@
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>-->
 </Page>
+

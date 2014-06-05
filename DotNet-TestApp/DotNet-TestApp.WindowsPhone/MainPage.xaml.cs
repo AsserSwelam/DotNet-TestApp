@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -22,11 +23,20 @@ namespace DotNet_TestApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private bool isMapFullScrn = false;
+
+        Storyboard _beamImgDirectionStoryboard;
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            ExMap = new ExMap(esriMap);
+
+            GeoMap.PanToChangedEvent += GeoMap_PanToChangedEvent;
+            _geoMap.NavigateExtentDoneEvent += _geoMap_NavigateExtentDoneEvent;
         }
 
         /// <summary>
@@ -43,6 +53,81 @@ namespace DotNet_TestApp
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        private void btnFullExtent_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnPrevExtent_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNextExtent_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAutoNav_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRedDrawPoint_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRedDrawLine_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRedDrawPolygon_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRedDrawText_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRedSettings_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnMapFullScrn_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAutoNavBase_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnMeasurSet_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void AppBarButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void AppBarButton_PointerPressed_1(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnClearMapGraphics_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
@@ -12,8 +12,40 @@
     <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)AccelerometerPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StopZone.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StopZoneDouble.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TiltNavigation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)images\accel_icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Apply.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\ApplyAll.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\arrow.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Cancel_D.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\DeleteGraphics.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\edit.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Freehand.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\globe.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Me_D.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\next.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Point.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Polygon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Polyline.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\previous.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Rectangle.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\save.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\Search_D.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\stop.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\StopDraw.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\text.png" />
+    <Content Include="$(MSBuildThisFileDirectory)images\toc.ico" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ASSERDT2</Machine>
+    <WindowsUser>asse7505</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>43743454-8cee-4136-906f-93899baef7e9</PackageIdentityName>
+    <IntermediateOutputPath>C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\x86\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\DotNet-TestApp.Windows.exe">
+      <PackagePath>DotNet-TestApp.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\accel_icon.png">
+      <PackagePath>images\accel_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Apply.png">
+      <PackagePath>images\Apply.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\ApplyAll.png">
+      <PackagePath>images\ApplyAll.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\arrow.png">
+      <PackagePath>images\arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Cancel_D.png">
+      <PackagePath>images\Cancel_D.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\DeleteGraphics.png">
+      <PackagePath>images\DeleteGraphics.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\edit.png">
+      <PackagePath>images\edit.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Freehand.png">
+      <PackagePath>images\Freehand.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\globe.png">
+      <PackagePath>images\globe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Me_D.png">
+      <PackagePath>images\Me_D.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\next.png">
+      <PackagePath>images\next.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Point.png">
+      <PackagePath>images\Point.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Polygon.png">
+      <PackagePath>images\Polygon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Polyline.png">
+      <PackagePath>images\Polyline.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\previous.png">
+      <PackagePath>images\previous.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Rectangle.png">
+      <PackagePath>images\Rectangle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\save.png">
+      <PackagePath>images\save.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Search_D.png">
+      <PackagePath>images\Search_D.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\stop.png">
+      <PackagePath>images\stop.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\StopDraw.png">
+      <PackagePath>images\StopDraw.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\text.png">
+      <PackagePath>images\text.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\toc.ico">
+      <PackagePath>images\toc.ico</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\DotNet-TestApp.Windows.xr.xml">
+      <PackagePath>DotNet-TestApp.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
