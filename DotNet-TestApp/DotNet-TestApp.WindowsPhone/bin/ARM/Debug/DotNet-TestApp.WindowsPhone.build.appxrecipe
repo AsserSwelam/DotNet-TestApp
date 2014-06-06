@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ASSERDT2</Machine>
+    <WindowsUser>asse7505</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|ARM</SolutionConfiguration>
+    <PackageArchitecture>arm</PackageArchitecture>
+    <PackageIdentityName>b7ccb58c-ee46-4fd1-ba2b-862fcfbff352</PackageIdentityName>
+    <IntermediateOutputPath>C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\obj\ARM\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\bin\ARM\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\bin\ARM\Debug\DotNet-TestApp.WindowsPhone.exe">
+      <PackagePath>DotNet-TestApp.WindowsPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\References\CommonConfiguration\ARM\Esri.ArcGISRuntime.dll">
+      <PackagePath>Esri.ArcGISRuntime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\References\CommonConfiguration\neutral\RuntimeCoreNet.winmd">
+      <PackagePath>RuntimeCoreNet.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\Esri.ArcGISRuntime\Themes\Generic.xbf">
+      <PackagePath>Esri.ArcGISRuntime\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\Esri.ArcGISRuntime\Logo.scale-100.png">
+      <PackagePath>Esri.ArcGISRuntime\Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\Esri.ArcGISRuntime\Logo.scale-180.png">
+      <PackagePath>Esri.ArcGISRuntime\Logo.scale-180.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\magnifier_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\magnifier_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\magnifier_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\magnifier_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\offscreen_buffer_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\offscreen_buffer_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\offscreen_buffer_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\offscreen_buffer_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\screen_image_renderer_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\screen_image_renderer_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\screen_image_renderer_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\screen_image_renderer_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_area_pick_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_area_pick_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_area_pick_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_area_pick_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_area_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_area_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_area_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_area_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_line_halo_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_line_halo_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_line_halo_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_line_halo_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_line_pick_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_line_pick_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_line_pick_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_line_pick_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_line_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_line_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_line_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_line_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_point_halo_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_point_halo_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_point_halo_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_point_halo_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_point_pick_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_point_pick_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_point_pick_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_point_pick_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_point_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_point_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\seq_render_point_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\seq_render_point_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\simple_grid_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\simple_grid_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\simple_grid_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\simple_grid_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\tex_quad_shader_program_advanced_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\tex_quad_shader_program_advanced_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\tex_quad_shader_program_advanced_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\tex_quad_shader_program_advanced_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\tex_quad_shader_program_ps_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\tex_quad_shader_program_ps_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\neutral\RuntimeCoreNet\resources\shaders\tex_quad_shader_program_vs_4_0.cso">
+      <PackagePath>RuntimeCoreNet\resources\shaders\tex_quad_shader_program_vs_4_0.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsPhone\Redist\CommonConfiguration\ARM\RuntimeCoreNet.dll">
+      <PackagePath>RuntimeCoreNet.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\accel_icon.png">
+      <PackagePath>images\accel_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Apply.png">
+      <PackagePath>images\Apply.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\ApplyAll.png">
+      <PackagePath>images\ApplyAll.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\arrow.png">
+      <PackagePath>images\arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Cancel_D.png">
+      <PackagePath>images\Cancel_D.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\DeleteGraphics.png">
+      <PackagePath>images\DeleteGraphics.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\edit.png">
+      <PackagePath>images\edit.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Freehand.png">
+      <PackagePath>images\Freehand.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\globe.png">
+      <PackagePath>images\globe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Me_D.png">
+      <PackagePath>images\Me_D.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\next.png">
+      <PackagePath>images\next.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Point.png">
+      <PackagePath>images\Point.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Polygon.png">
+      <PackagePath>images\Polygon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Polyline.png">
+      <PackagePath>images\Polyline.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\previous.png">
+      <PackagePath>images\previous.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Rectangle.png">
+      <PackagePath>images\Rectangle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\save.png">
+      <PackagePath>images\save.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\Search_D.png">
+      <PackagePath>images\Search_D.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\stop.png">
+      <PackagePath>images\stop.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\StopDraw.png">
+      <PackagePath>images\StopDraw.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\text.png">
+      <PackagePath>images\text.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Shared\images\toc.ico">
+      <PackagePath>images\toc.ico</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\bin\ARM\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\bin\ARM\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\bin\ARM\Debug\DotNet-TestApp.WindowsPhone.xr.xml">
+      <PackagePath>DotNet-TestApp.WindowsPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.WindowsPhone\bin\ARM\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Phone.Debug</Name>
+      <Version>12.0.30113.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Phone.Debug, MinVersion = 12.0.30113.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.12.00.Phone.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Phone.Debug</Name>
+      <Version>12.0.30113.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Phone.Debug, MinVersion = 12.0.30113.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.12.00.Phone.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

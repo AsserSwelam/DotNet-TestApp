@@ -5,15 +5,12 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNet-TestApp", "DotNet-TestApp", "{F032FF4B-CBAB-43A6-B819-FCED93A742C9}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DotNet-TestApp.Shared", "DotNet-TestApp\DotNet-TestApp.Shared\DotNet-TestApp.Shared.shproj", "{CB984574-4875-4A34-8F2A-2BD611580836}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet-TestApp.Windows", "DotNet-TestApp\DotNet-TestApp.Windows\DotNet-TestApp.Windows.csproj", "{CD805BB4-209E-4C71-800D-A886F28A5995}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet-TestApp.WindowsPhone", "DotNet-TestApp\DotNet-TestApp.WindowsPhone\DotNet-TestApp.WindowsPhone.csproj", "{15A14F68-C7D3-4D07-A26A-864FE2C7156D}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		DotNet-TestApp\DotNet-TestApp.Shared\DotNet-TestApp.Shared.projitems*{cb984574-4875-4a34-8f2a-2bd611580836}*SharedItemsImports = 13
 		DotNet-TestApp\DotNet-TestApp.Shared\DotNet-TestApp.Shared.projitems*{cd805bb4-209e-4c71-800d-a886f28a5995}*SharedItemsImports = 4
 		DotNet-TestApp\DotNet-TestApp.Shared\DotNet-TestApp.Shared.projitems*{15a14f68-c7d3-4d07-a26a-864fe2c7156d}*SharedItemsImports = 4
 	EndGlobalSection
@@ -77,7 +74,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{CB984574-4875-4A34-8F2A-2BD611580836} = {F032FF4B-CBAB-43A6-B819-FCED93A742C9}
 		{CD805BB4-209E-4C71-800D-A886F28A5995} = {F032FF4B-CBAB-43A6-B819-FCED93A742C9}
 		{15A14F68-C7D3-4D07-A26A-864FE2C7156D} = {F032FF4B-CBAB-43A6-B819-FCED93A742C9}
 	EndGlobalSection

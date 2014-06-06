@@ -1,0 +1,10 @@
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\App.g.i.cs
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\App.g.cs
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\MainPage.g.i.cs
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\MainPage.g.cs
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\XamlTypeInfo.g.cs
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\App.xaml
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\MainPage.xaml
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\App.xbf
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\MainPage.xbf
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\ARM\Debug\XamlSaveStateFile.xml
