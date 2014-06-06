@@ -52,7 +52,7 @@ namespace DotNet_TestApp
             if (_myDispatcherTimer == null)
             {
                 _myDispatcherTimer = new DispatcherTimer();
-                _myDispatcherTimer.Interval = new TimeSpan(0, 0, 0, 3, 0); // 100 Milliseconds 
+                _myDispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1, 0); // 100 Milliseconds 
                 _myDispatcherTimer.Tick += _myDispatcherTimer_Tick;
             }
            
@@ -351,22 +351,23 @@ namespace DotNet_TestApp
 
             switch (direction)
             {
+                    
                 case Directions.West:
-                    _map.SetView(new MapPoint(extent.XMin, center.Y)); break;
+                    _map.SetViewAsync(new MapPoint(extent.XMin, center.Y), new TimeSpan(0,0,0,1,500)); break;
                 case Directions.East:
-                    _map.SetView(new MapPoint(extent.XMax, center.Y)); break;
+                    _map.SetViewAsync(new MapPoint(extent.XMax, center.Y), new TimeSpan(0,0,0,1,500)); break;
                 case Directions.North:
-                    _map.SetView(new MapPoint(center.X, extent.YMax)); break;
+                    _map.SetViewAsync(new MapPoint(center.X, extent.YMax), new TimeSpan(0,0,0,1,500)); break;
                 case Directions.South:
-                    _map.SetView(new MapPoint(center.X, extent.YMin)); break;
+                    _map.SetViewAsync(new MapPoint(center.X, extent.YMin), new TimeSpan(0,0,0,1,500)); break;
                 case Directions.NorthEast:
-                    _map.SetView(new MapPoint(extent.XMax, extent.YMax)); break;
+                    _map.SetViewAsync(new MapPoint(extent.XMax, extent.YMax), new TimeSpan(0,0,0,1,500)); break;
                 case Directions.SouthEast:
-                    _map.SetView(new MapPoint(extent.XMax, extent.YMin)); break;
+                    _map.SetViewAsync(new MapPoint(extent.XMax, extent.YMin), new TimeSpan(0,0,0,1,500)); break;
                 case Directions.NorthWest:
-                    _map.SetView(new MapPoint(extent.XMin, extent.YMax)); break;
+                    _map.SetViewAsync(new MapPoint(extent.XMin, extent.YMax), new TimeSpan(0,0,0,1,500)); break;
                 case Directions.SouthWest:
-                    _map.SetView(new MapPoint(extent.XMin, extent.YMin)); break;
+                    _map.SetViewAsync(new MapPoint(extent.XMin, extent.YMin), new TimeSpan(0,0,0,1,500)); break;
                 default: break;
             }
         }

@@ -5,10 +5,363 @@
     xmlns:local="using:DotNet_TestApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Esri.ArcGISRuntime.Controls"
+    xmlns:layers="using:Esri.ArcGISRuntime.Layers"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        <Grid.Resources>
+            <Storyboard x:Name="beamImgW_SB" RepeatBehavior="1">
+                <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgW" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imgW" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imgW" d:IsOptimized="True"/>
+            </Storyboard>
+            <Storyboard x:Name="beamImgN_SB" RepeatBehavior="1">
+                <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgN" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imgN" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imgN" d:IsOptimized="True"/>
+            </Storyboard>
+            <Storyboard x:Name="beamImgS_SB" RepeatBehavior="1" >
+                <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgS" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imgS" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imgS" d:IsOptimized="True"/>
+            </Storyboard>
+            <Storyboard x:Name="beamImgE_SB" RepeatBehavior="1">
+                <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgE" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imgE" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imgE" d:IsOptimized="True"/>
+            </Storyboard>
+            <Storyboard x:Name="beamImgNE_SB" RepeatBehavior="1">
+                <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgNE" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imgNE" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imgNE" d:IsOptimized="True"/>
+            </Storyboard>
+            <Storyboard x:Name="beamImgSE_SB" RepeatBehavior="1">
+                <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgSE" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imgSE" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imgSE" d:IsOptimized="True"/>
+            </Storyboard>
+            <Storyboard x:Name="beamImgSW_SB" RepeatBehavior="1">
+                <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgSW" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imgSW" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imgSW" d:IsOptimized="True"/>
+            </Storyboard>
+            <Storyboard x:Name="beamImgNW_SB" RepeatBehavior="1">
+                <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgNW" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imgNW" d:IsOptimized="True"/>
+                <DoubleAnimation Duration="0:0:3" To="50" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imgNW" d:IsOptimized="True"/>
+            </Storyboard>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <!--<Pivot x:Name="functionsPivot" Grid.Row="0" Height="190">
+            <PivotItem Header="Map" Margin="12,0">-->
+                <Grid Grid.Row="0" Height="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:ConnectionId='3' x:Name="btnFullExtent_MapNav"  Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/globe.png"                                                      />
+                    <Image x:ConnectionId='4' x:Name="btnPrevExtent_MapNav"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/previous.png"                                                        Opacity="{Binding _prevBtnOpacity}"/>
+                    <Image x:ConnectionId='5' x:Name="btnNextExtent_MapNav"  Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/next.png"                                                       Opacity="{Binding NextBtnOpacity}" />
+                    <Image x:ConnectionId='6' x:Name="btnAutoNav_MapNav"  Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/accel_icon.png"                                                    Opacity="1" />
+
+
+                    <TextBlock Text="full" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="privous"   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="next" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Auto Navigation" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+                </Grid>
+            <!--</PivotItem>-->
+            <!--<PivotItem Header="Redlining" Visibility="Visible" Margin="12,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:Name="btnRedDrawPoint" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Point.png" PointerPressed="btnRedDrawPoint_PointerPressed"/>
+                    <Image x:Name="btnRedDrawLine" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Polyline.png" PointerPressed="btnRedDrawLine_PointerPressed"/>
+                    <Image x:Name="btnRedDrawPolygon" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/Polygon.png" PointerPressed="btnRedDrawPolygon_PointerPressed"/>
+                    <Image x:Name="btnRedDrawText" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/text.png" PointerPressed="btnRedDrawText_PointerPressed"/>
+                    <Image  x:Name="btnRedSettings" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/images/edit.png" PointerPressed="btnRedSettings_PointerPressed"/>
+
+                    <TextBlock Text="point" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="line"   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="polygon" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="text" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="settings" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Measurment" Visibility="Visible" Margin="12,0" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="25*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Content="Button" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button x:Name="btnMeasurSet" Content="Button" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" PointerPressed="btnMeasurSet_PointerPressed"/>
+
+
+                    <TextBlock Text="x,y" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="distance"   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="area" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="settings" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="BookMark" Visibility="Visible" Margin="12,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Content="Button" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="all" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="add" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="BaseMaps" Visibility="Visible" Margin="12,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Button Content="Button" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="all" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="External Data" Visibility="Visible" Margin="12,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="url:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Width="250" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+
+
+                    <TextBlock Text="add" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="remove" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Spatial Search" Visibility="Visible" Margin="12,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Content="Button" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="point" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="line"   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="polygon" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="settings" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="result" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Search" Visibility="Visible" Margin="12,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Width="200"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content="Button" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="search" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="settings" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="result" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                </Grid>
+            </PivotItem>-->
+
+        <!--</Pivot>-->
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="mapContent" Background="Black" Margin="12,0,12,0" Grid.Row="1" >
+
+            <controls:MapView x:Name="myMap">
+                <controls:Map>
+                    <layers:ArcGISTiledMapServiceLayer ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>
+                </controls:Map>
+            </controls:MapView>
+
+            <Button x:ConnectionId='1' x:Name="btnMapFullScrn" Content="^" Opacity="0.7" Width="100" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center"                              Margin="133,0,134,0" />
+
+
+
+            <Button x:ConnectionId='2' x:Name="btnAutoNavBase_MapNav"  Width="30" Height="30" Opacity="0.8" Visibility="Collapsed"
+                    VerticalAlignment="Center" HorizontalAlignment="Center"                                     >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="/images/stop.png"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+
+
+            <Image x:Name="imgN" VerticalAlignment="Top" HorizontalAlignment="Center" Source="/images/arrow.png"
+                   Width="30" Height="30" Opacity="0.25" Visibility="Collapsed">
+                <Image.Projection>
+                    <PlaneProjection RotationZ="90"/>
+                </Image.Projection>
+            </Image>
+
+            <Image x:Name="imgW" VerticalAlignment="Center" HorizontalAlignment="Left" Source="/images/arrow.png"
+            	Width="30" Height="30" Opacity="0.25" RenderTransformOrigin="-2.675,4.25" Visibility="Collapsed" >
+                <Image.Projection>
+                    <PlaneProjection RotationY="180"/>
+                </Image.Projection>
+            </Image>
+
+            <Image x:Name="imgE" VerticalAlignment="Center" HorizontalAlignment="Right" Source="/images/arrow.png"
+            	Width="30" Height="30" Opacity="0.25" Visibility="Collapsed" />
+
+            <Image x:Name="imgS" VerticalAlignment="Bottom" HorizontalAlignment="Center" Source="/images/arrow.png"
+            	Width="30" Height="30" Opacity="0.25"  Visibility="Collapsed">
+                <Image.Projection>
+                    <PlaneProjection RotationZ="-90"/>
+                </Image.Projection>
+
+
+            </Image>
+
+            <Image x:Name="imgNW" VerticalAlignment="Top" HorizontalAlignment="Left" Source="/images/arrow.png"
+            	Width="30" Height="30" Opacity="0.25" RenderTransformOrigin="-2.675,4.25" Visibility="Collapsed" >
+                <Image.Projection>
+                    <PlaneProjection RotationY="180" RotationZ="-47"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="imgSE" VerticalAlignment="Bottom" HorizontalAlignment="Right" Source="/images/arrow.png"
+            	Width="30" Height="30" Opacity="0.25" Visibility="Collapsed">
+                <Image.Projection>
+                    <PlaneProjection RotationZ="-47"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="imgNE" VerticalAlignment="Top" HorizontalAlignment="Right" Source="/images/arrow.png"
+            	Width="30" Height="30" Opacity="0.25" Visibility="Collapsed">
+                <Image.Projection>
+                    <PlaneProjection RotationZ="41"/>
+                </Image.Projection>
+            </Image>
+            <Image x:Name="imgSW" VerticalAlignment="Bottom" HorizontalAlignment="Left" Source="/images/arrow.png"
+            	Width="30" Height="30" Opacity="0.25" Visibility="Collapsed">
+                <Image.Projection>
+                    <PlaneProjection RotationZ="-137"/>
+                </Image.Projection>
+            </Image>
+        </Grid>
+
 
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:ConnectionId='7' Label="Cancel" Icon="Cancel"                                  />
+                <AppBarButton x:ConnectionId='8' Label="My Location" Icon="Contact"                                    />
+                <AppBarButton Label="Search" Icon="Find"/>
+                <AppBarButton Label="Content" Icon="Bullets"/>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:ConnectionId='9' x:Name="btnClearMapGraphics" Label="Clear Map" IsEnabled="False"                                                    />
+                <AppBarButton Label="Pin to start" IsEnabled="True"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
 

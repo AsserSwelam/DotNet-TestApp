@@ -30,3 +30,7 @@ C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\x86\Deb
 C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\x86\Debug\qualifiers.txt.intermediate
 C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\x86\Debug\ProjectArchitectures.txt
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\Esri.ArcGISRuntime.dll
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\Esri.ArcGISRuntime.xml
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\RuntimeCoreNet.winmd
+C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\obj\x86\Debug\DotNet-TestApp.Windows.csproj.GenerateResource.Cache

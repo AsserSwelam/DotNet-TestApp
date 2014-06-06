@@ -55,8 +55,10 @@
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Template" />
+      <RootEvent Name="Click" />
       <RootEvent Name="PointerPressed" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -81,7 +83,9 @@
     <RootType FullName="Esri.ArcGISRuntime.Controls.Map">
       <RootProperty Name="Layers" />
     </RootType>
-    <RootType FullName="Esri.ArcGISRuntime.Layers.OpenStreetMapLayer" />
+    <RootType FullName="Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer">
+      <RootProperty Name="ServiceUri" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />
       <RootProperty Name="Margin" />

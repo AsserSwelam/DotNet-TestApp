@@ -341,36 +341,6 @@ namespace DotNet_TestApp
             //NavigationService.Navigate(new Uri("/View/RedSetPivotPage.xaml", UriKind.Relative));
         }
 
-        private void btnMapFullScrn_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            if (!isMapFullScrn)
-            {
-                mapContent.SetValue(Grid.RowProperty, 0);
-                mapContent.SetValue(Grid.RowSpanProperty, 2);
-
-                btnMapFullScrn.Content = "v";
-
-                functionsPivot.Visibility =  Windows.UI.Xaml.Visibility.Collapsed;
-
-                isMapFullScrn = true;
-            }
-            else
-            {
-                mapContent.SetValue(Grid.RowProperty, 1);
-                mapContent.SetValue(Grid.RowSpanProperty, 1);
-
-                btnMapFullScrn.Content = "^";
-
-                functionsPivot.Visibility = Windows.UI.Xaml.Visibility.Visible;
-
-                isMapFullScrn = false;
-            }
-        }
-
-        private void btnAutoNavBase_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            SetAutoNavBase();
-        }
 
         private void btnMeasurSet_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
@@ -409,6 +379,37 @@ namespace DotNet_TestApp
         private void AppBarButtonLocation_Click(object sender, RoutedEventArgs e)
         {
             SetMyLocation();
+        }
+
+        private void btnMapFullScrn_Click(object sender, RoutedEventArgs e)
+        {
+            if (!isMapFullScrn)
+            {
+                mapContent.SetValue(Grid.RowProperty, 0);
+                mapContent.SetValue(Grid.RowSpanProperty, 2);
+
+                btnMapFullScrn.Content = "v";
+
+                functionsPivot.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+
+                isMapFullScrn = true;
+            }
+            else
+            {
+                mapContent.SetValue(Grid.RowProperty, 1);
+                mapContent.SetValue(Grid.RowSpanProperty, 1);
+
+                btnMapFullScrn.Content = "^";
+
+                functionsPivot.Visibility = Windows.UI.Xaml.Visibility.Visible;
+
+                isMapFullScrn = false;
+            }
+        }
+
+        private void btnAutoNavBase_MapNav_Click(object sender, RoutedEventArgs e)
+        {
+            SetAutoNavBase();
         }
     }
 }

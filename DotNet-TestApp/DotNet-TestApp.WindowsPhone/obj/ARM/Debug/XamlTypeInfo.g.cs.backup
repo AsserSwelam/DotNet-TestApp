@@ -182,12 +182,12 @@ namespace DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo
             _typeNameTable[30] = "Windows.UI.Xaml.Controls.UIElementCollection";
             _typeNameTable[31] = "Esri.ArcGISRuntime.Geometry.MapPoint";
             _typeNameTable[32] = "Windows.UI.Xaml.FrameworkElement";
-            _typeNameTable[33] = "Esri.ArcGISRuntime.Layers.OpenStreetMapLayer";
-            _typeNameTable[34] = "Esri.ArcGISRuntime.Layers.WebTiledLayer";
-            _typeNameTable[35] = "Esri.ArcGISRuntime.Layers.TiledMapServiceLayer";
-            _typeNameTable[36] = "Esri.ArcGISRuntime.Layers.TiledLayer";
-            _typeNameTable[37] = "String[]";
-            _typeNameTable[38] = "System.Array";
+            _typeNameTable[33] = "Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer";
+            _typeNameTable[34] = "Esri.ArcGISRuntime.Layers.TiledLayer";
+            _typeNameTable[35] = "Esri.ArcGISRuntime.ArcGISServices.MapServiceInfo";
+            _typeNameTable[36] = "Esri.ArcGISRuntime.ArcGISServices.MapServiceInfoBase";
+            _typeNameTable[37] = "Esri.ArcGISRuntime.ArcGISServices.ServiceInfo";
+            _typeNameTable[38] = "System.Net.Http.HttpMessageHandler";
             _typeNameTable[39] = "Esri.ArcGISRuntime.Layers.TiledLayerInitializationInfo";
             _typeNameTable[40] = "Esri.ArcGISRuntime.Layers.LayerInitializationInfo";
             _typeNameTable[41] = "DotNet_TestApp.MainPage";
@@ -228,12 +228,12 @@ namespace DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo
             _typeTable[30] = typeof(global::Windows.UI.Xaml.Controls.UIElementCollection);
             _typeTable[31] = typeof(global::Esri.ArcGISRuntime.Geometry.MapPoint);
             _typeTable[32] = typeof(global::Windows.UI.Xaml.FrameworkElement);
-            _typeTable[33] = typeof(global::Esri.ArcGISRuntime.Layers.OpenStreetMapLayer);
-            _typeTable[34] = typeof(global::Esri.ArcGISRuntime.Layers.WebTiledLayer);
-            _typeTable[35] = typeof(global::Esri.ArcGISRuntime.Layers.TiledMapServiceLayer);
-            _typeTable[36] = typeof(global::Esri.ArcGISRuntime.Layers.TiledLayer);
-            _typeTable[37] = typeof(global::System.String[]);
-            _typeTable[38] = typeof(global::System.Array);
+            _typeTable[33] = typeof(global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer);
+            _typeTable[34] = typeof(global::Esri.ArcGISRuntime.Layers.TiledLayer);
+            _typeTable[35] = typeof(global::Esri.ArcGISRuntime.ArcGISServices.MapServiceInfo);
+            _typeTable[36] = typeof(global::Esri.ArcGISRuntime.ArcGISServices.MapServiceInfoBase);
+            _typeTable[37] = typeof(global::Esri.ArcGISRuntime.ArcGISServices.ServiceInfo);
+            _typeTable[38] = typeof(global::System.Net.Http.HttpMessageHandler);
             _typeTable[39] = typeof(global::Esri.ArcGISRuntime.Layers.TiledLayerInitializationInfo);
             _typeTable[40] = typeof(global::Esri.ArcGISRuntime.Layers.LayerInitializationInfo);
             _typeTable[41] = typeof(global::DotNet_TestApp.MainPage);
@@ -289,8 +289,7 @@ namespace DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo
         private object Activate_28_TimeExtent() { return new global::Esri.ArcGISRuntime.Data.TimeExtent(); }
         private object Activate_29_Editor() { return new global::Esri.ArcGISRuntime.Controls.Editor(); }
         private object Activate_31_MapPoint() { return new global::Esri.ArcGISRuntime.Geometry.MapPoint(); }
-        private object Activate_33_OpenStreetMapLayer() { return new global::Esri.ArcGISRuntime.Layers.OpenStreetMapLayer(); }
-        private object Activate_34_WebTiledLayer() { return new global::Esri.ArcGISRuntime.Layers.WebTiledLayer(); }
+        private object Activate_33_ArcGISTiledMapServiceLayer() { return new global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer(); }
         private object Activate_41_MainPage() { return new global::DotNet_TestApp.MainPage(); }
         private void VectorAdd_5_LayerCollection(object instance, object item)
         {
@@ -562,28 +561,17 @@ namespace DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo
                 xamlType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 33:   //  Esri.ArcGISRuntime.Layers.OpenStreetMapLayer
-                userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Esri.ArcGISRuntime.Layers.WebTiledLayer"));
-                userType.Activator = Activate_33_OpenStreetMapLayer;
-                xamlType = userType;
-                break;
-
-            case 34:   //  Esri.ArcGISRuntime.Layers.WebTiledLayer
-                userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Esri.ArcGISRuntime.Layers.TiledMapServiceLayer"));
-                userType.Activator = Activate_34_WebTiledLayer;
-                userType.AddMemberName("TemplateUri");
-                userType.AddMemberName("SubDomains");
-                userType.AddMemberName("CopyrightText");
-                userType.AddMemberName("LevelValues");
-                xamlType = userType;
-                break;
-
-            case 35:   //  Esri.ArcGISRuntime.Layers.TiledMapServiceLayer
+            case 33:   //  Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer
                 userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Esri.ArcGISRuntime.Layers.TiledLayer"));
+                userType.Activator = Activate_33_ArcGISTiledMapServiceLayer;
+                userType.AddMemberName("ServiceUri");
+                userType.AddMemberName("Token");
+                userType.AddMemberName("ServiceInfo");
+                userType.AddMemberName("HttpMessageHandler");
                 xamlType = userType;
                 break;
 
-            case 36:   //  Esri.ArcGISRuntime.Layers.TiledLayer
+            case 34:   //  Esri.ArcGISRuntime.Layers.TiledLayer
                 userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Esri.ArcGISRuntime.Layers.Layer"));
                 userType.AddMemberName("TileInfo");
                 userType.AddMemberName("Brightness");
@@ -592,14 +580,25 @@ namespace DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 37:   //  String[]
-                userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Array"));
+            case 35:   //  Esri.ArcGISRuntime.ArcGISServices.MapServiceInfo
+                userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Esri.ArcGISRuntime.ArcGISServices.MapServiceInfoBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 38:   //  System.Array
+            case 36:   //  Esri.ArcGISRuntime.ArcGISServices.MapServiceInfoBase
+                userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Esri.ArcGISRuntime.ArcGISServices.ServiceInfo"));
+                xamlType = userType;
+                break;
+
+            case 37:   //  Esri.ArcGISRuntime.ArcGISServices.ServiceInfo
                 userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 38:   //  System.Net.Http.HttpMessageHandler
+                userType = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
@@ -1006,45 +1005,40 @@ namespace DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo
             var that = (global::Esri.ArcGISRuntime.Controls.Map)instance;
             that.InitialExtent = (global::Esri.ArcGISRuntime.Geometry.Envelope)Value;
         }
-        private object get_37_WebTiledLayer_TemplateUri(object instance)
+        private object get_37_ArcGISTiledMapServiceLayer_ServiceUri(object instance)
         {
-            var that = (global::Esri.ArcGISRuntime.Layers.WebTiledLayer)instance;
-            return that.TemplateUri;
+            var that = (global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer)instance;
+            return that.ServiceUri;
         }
-        private void set_37_WebTiledLayer_TemplateUri(object instance, object Value)
+        private void set_37_ArcGISTiledMapServiceLayer_ServiceUri(object instance, object Value)
         {
-            var that = (global::Esri.ArcGISRuntime.Layers.WebTiledLayer)instance;
-            that.TemplateUri = (global::System.String)Value;
+            var that = (global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer)instance;
+            that.ServiceUri = (global::System.String)Value;
         }
-        private object get_38_WebTiledLayer_SubDomains(object instance)
+        private object get_38_ArcGISTiledMapServiceLayer_Token(object instance)
         {
-            var that = (global::Esri.ArcGISRuntime.Layers.WebTiledLayer)instance;
-            return that.SubDomains;
+            var that = (global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer)instance;
+            return that.Token;
         }
-        private void set_38_WebTiledLayer_SubDomains(object instance, object Value)
+        private void set_38_ArcGISTiledMapServiceLayer_Token(object instance, object Value)
         {
-            var that = (global::Esri.ArcGISRuntime.Layers.WebTiledLayer)instance;
-            that.SubDomains = (global::System.String[])Value;
+            var that = (global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer)instance;
+            that.Token = (global::System.String)Value;
         }
-        private object get_39_WebTiledLayer_CopyrightText(object instance)
+        private object get_39_ArcGISTiledMapServiceLayer_ServiceInfo(object instance)
         {
-            var that = (global::Esri.ArcGISRuntime.Layers.WebTiledLayer)instance;
-            return that.CopyrightText;
+            var that = (global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer)instance;
+            return that.ServiceInfo;
         }
-        private void set_39_WebTiledLayer_CopyrightText(object instance, object Value)
+        private object get_40_ArcGISTiledMapServiceLayer_HttpMessageHandler(object instance)
         {
-            var that = (global::Esri.ArcGISRuntime.Layers.WebTiledLayer)instance;
-            that.CopyrightText = (global::System.String)Value;
+            var that = (global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer)instance;
+            return that.HttpMessageHandler;
         }
-        private object get_40_WebTiledLayer_LevelValues(object instance)
+        private void set_40_ArcGISTiledMapServiceLayer_HttpMessageHandler(object instance, object Value)
         {
-            var that = (global::Esri.ArcGISRuntime.Layers.WebTiledLayer)instance;
-            return that.LevelValues;
-        }
-        private void set_40_WebTiledLayer_LevelValues(object instance, object Value)
-        {
-            var that = (global::Esri.ArcGISRuntime.Layers.WebTiledLayer)instance;
-            that.LevelValues = (global::System.String[])Value;
+            var that = (global::Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer)instance;
+            that.HttpMessageHandler = (global::System.Net.Http.HttpMessageHandler)Value;
         }
         private object get_41_TiledLayer_TileInfo(object instance)
         {
@@ -1333,33 +1327,32 @@ namespace DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo
                 xamlMember.Getter = get_36_Map_InitialExtent;
                 xamlMember.Setter = set_36_Map_InitialExtent;
                 break;
-            case "Esri.ArcGISRuntime.Layers.WebTiledLayer.TemplateUri":
-                userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.WebTiledLayer");
-                xamlMember = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "TemplateUri", "String");
+            case "Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer.ServiceUri":
+                userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer");
+                xamlMember = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "ServiceUri", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_37_WebTiledLayer_TemplateUri;
-                xamlMember.Setter = set_37_WebTiledLayer_TemplateUri;
+                xamlMember.Getter = get_37_ArcGISTiledMapServiceLayer_ServiceUri;
+                xamlMember.Setter = set_37_ArcGISTiledMapServiceLayer_ServiceUri;
                 break;
-            case "Esri.ArcGISRuntime.Layers.WebTiledLayer.SubDomains":
-                userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.WebTiledLayer");
-                xamlMember = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "SubDomains", "String[]");
+            case "Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer.Token":
+                userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer");
+                xamlMember = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "Token", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_38_WebTiledLayer_SubDomains;
-                xamlMember.Setter = set_38_WebTiledLayer_SubDomains;
+                xamlMember.Getter = get_38_ArcGISTiledMapServiceLayer_Token;
+                xamlMember.Setter = set_38_ArcGISTiledMapServiceLayer_Token;
                 break;
-            case "Esri.ArcGISRuntime.Layers.WebTiledLayer.CopyrightText":
-                userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.WebTiledLayer");
-                xamlMember = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "CopyrightText", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_39_WebTiledLayer_CopyrightText;
-                xamlMember.Setter = set_39_WebTiledLayer_CopyrightText;
+            case "Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer.ServiceInfo":
+                userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer");
+                xamlMember = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "ServiceInfo", "Esri.ArcGISRuntime.ArcGISServices.MapServiceInfo");
+                xamlMember.Getter = get_39_ArcGISTiledMapServiceLayer_ServiceInfo;
+                xamlMember.SetIsReadOnly();
                 break;
-            case "Esri.ArcGISRuntime.Layers.WebTiledLayer.LevelValues":
-                userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.WebTiledLayer");
-                xamlMember = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "LevelValues", "String[]");
+            case "Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer.HttpMessageHandler":
+                userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.ArcGISTiledMapServiceLayer");
+                xamlMember = new global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlMember(this, "HttpMessageHandler", "System.Net.Http.HttpMessageHandler");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_40_WebTiledLayer_LevelValues;
-                xamlMember.Setter = set_40_WebTiledLayer_LevelValues;
+                xamlMember.Getter = get_40_ArcGISTiledMapServiceLayer_HttpMessageHandler;
+                xamlMember.Setter = set_40_ArcGISTiledMapServiceLayer_HttpMessageHandler;
                 break;
             case "Esri.ArcGISRuntime.Layers.TiledLayer.TileInfo":
                 userType = (global::DotNet_TestApp.DotNet_TestApp_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Esri.ArcGISRuntime.Layers.TiledLayer");

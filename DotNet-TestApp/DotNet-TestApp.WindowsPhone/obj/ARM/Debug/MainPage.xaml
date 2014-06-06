@@ -11,7 +11,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        
+
         <Grid.Resources>
             <Storyboard x:Name="beamImgW_SB" RepeatBehavior="1">
                 <DoubleAnimation Duration="0:0:3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgW" d:IsOptimized="True"/>
@@ -276,15 +276,16 @@
 
             <controls:MapView x:Name="myMap">
                 <controls:Map>
-                    <layers:OpenStreetMapLayer/>
+                    <layers:ArcGISTiledMapServiceLayer ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>
                 </controls:Map>
             </controls:MapView>
-            <Button x:ConnectionId='1' x:Name="btnMapFullScrn" Content="^" Opacity="0.7" Width="70" Height="70" VerticalAlignment="Top" HorizontalAlignment="Center"                                               />
+       
+            <Button x:ConnectionId='1' x:Name="btnMapFullScrn" Content="^" Opacity="0.7" Width="100" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center"                              Margin="133,0,134,0" />
 
 
 
             <Button x:ConnectionId='2' x:Name="btnAutoNavBase_MapNav"  Width="30" Height="30" Opacity="0.8" Visibility="Collapsed"
-                    VerticalAlignment="Center" HorizontalAlignment="Center"                                                      >
+                    VerticalAlignment="Center" HorizontalAlignment="Center"                                     >
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="/images/stop.png"/>
@@ -345,8 +346,8 @@
                 </Image.Projection>
             </Image>
         </Grid>
-        
-        
+
+
     </Grid>
 
     <Page.BottomAppBar>
