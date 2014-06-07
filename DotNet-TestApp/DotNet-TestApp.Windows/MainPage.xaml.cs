@@ -93,50 +93,6 @@ namespace DotNet_TestApp
                 _exMap.FullExtent();
         }
 
-        public async void SetMyLocation()
-        {
-            //double xLoc;
-            //double yLoc;
-
-            //if ((bool)IsolatedStorageSettings.ApplicationSettings["LocationConsent"] != true)
-            //{
-            //    // The user has opted out of Location.
-            //    return;
-            //}
-
-            Geolocator geolocator = new Geolocator();
-            //geolocator.DesiredAccuracy = PositionAccuracy.High;
-
-            //try
-            //{
-            Geoposition geoposition = await geolocator.GetGeopositionAsync();
-
-            //    xLoc = geoposition.Coordinate.Longitude;
-            //    yLoc = geoposition.Coordinate.Latitude;
-
-            //    _exMap.ZoomToPoint(xLoc, yLoc);
-
-            //    _graphicsOnMap = true;
-            //}
-            //catch (Exception ex)
-            //{
-            //    if ((uint)ex.HResult == 0x80004004)
-            //    {
-            //        // the application does not have the right capability or the location master switch is off
-            //        MessageBox.Show("location  is disabled in phone settings.",
-            //       "Location",
-            //       MessageBoxButton.OK);
-            //    }
-            //    //else
-            //    {
-            //        // something else happened acquring the location
-            //    }
-            //}
-
-        }
-
-
-
         public void ClearMapGraphics()
         {
             _exMap.ClearGraphicsLayer();
@@ -379,7 +335,7 @@ namespace DotNet_TestApp
 
         private void AppBarButtonLocation_Click(object sender, RoutedEventArgs e)
         {
-            SetMyLocation();
+            _exMap.EnableMyLocation();
         }
 
         private void btnMapFullScrn_Click(object sender, RoutedEventArgs e)

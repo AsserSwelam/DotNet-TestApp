@@ -1,6 +1,7 @@
 ﻿using Esri.ArcGISRuntime.Controls;
 using Esri.ArcGISRuntime.Geometry;
 using Esri.ArcGISRuntime.Layers;
+using Esri.ArcGISRuntime.Location;
 using Esri.ArcGISRuntime.Symbology;
 using System;
 using System.Collections.Generic;
@@ -219,28 +220,16 @@ namespace DotNet_TestApp
 
         public void FullExtent()
         {
-            //_mapView.Extent = _mapView.Layers[0].FullExtent;
+            _mapView.SetViewAsync(_mapView.Map.Layers[0].FullExtent);
         }
 
-        public void ZoomToPoint(double x, double y)
+        public void EnableMyLocation()
         {
-            //_mercator = new WebMercator();
-            //Graphic pointGraphic = new Graphic();
+            _mapView.LocationDisplay = new LocationDisplay();
+            _mapView.LocationDisplay.IsEnabled = true;
+            _mapView.LocationDisplay.AutoPanMode = AutoPanMode.Default;
 
-            //pointGraphic.Geometry = new MapPoint(x, y);
-
-            //SimpleMarkerSymbol symbol = new SimpleMarkerSymbol();
-            //symbol.Color = new SolidColorBrush(Colors.Red);
-            //symbol.Style = SimpleMarkerSymbol.SimpleMarkerStyle.Diamond;
-            //symbol.Size = 20;
-
-            //pointGraphic.Symbol = symbol;
-
-            //_myLocationLayer.Graphics.Clear();
-            //_myLocationLayer.Graphics.Add(pointGraphic);
-
-
-            //_mapView.ZoomTo(GetCenterExtent(pointGraphic.Geometry as MapPoint));
+            _mapView.LocationDisplay.LocationProvider = new SystemLocationProvider();
         }
 
         public void ClearGraphicsLayer()

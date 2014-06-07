@@ -4285,19 +4285,21 @@
                 This class is used to define a shaped geometry.
             </summary>
         </member>
-        <member name="M:Esri.ArcGISRuntime.Controls.DrawGeometryShape.#ctor(Esri.ArcGISRuntime.Geometry.CoordinateCollection,Esri.ArcGISRuntime.Controls.DrawGeometryShape.ScaleMode)">
+        <member name="M:Esri.ArcGISRuntime.Controls.DrawGeometryShape.#ctor(Esri.ArcGISRuntime.Geometry.CoordinateCollection,Esri.ArcGISRuntime.Controls.DrawGeometryShape.ScaleMode,Esri.ArcGISRuntime.Controls.DrawGeometryShape.Alignment)">
             <summary>
                 Initializes a new instance of the <see cref="T:Esri.ArcGISRuntime.Controls.DrawGeometryShape"/> class.
             </summary>
             <param name="vertices">The vertices that define the shape.</param>
             <param name="scaleMode">The scale mode that defines how the shape will be drawn.</param>
+            <param name="alignment">Defines the alignment of shape when rotation is applied.</param>
         </member>
-        <member name="M:Esri.ArcGISRuntime.Controls.DrawGeometryShape.ScaleFromBaseShape(Esri.ArcGISRuntime.Geometry.MapPoint,Esri.ArcGISRuntime.Geometry.MapPoint)">
+        <member name="M:Esri.ArcGISRuntime.Controls.DrawGeometryShape.ScaleFromBaseShape(Esri.ArcGISRuntime.Geometry.MapPoint,Esri.ArcGISRuntime.Geometry.MapPoint,System.Double)">
             <summary>
                 Scales from base shape.
             </summary>
             <param name="startPoint">The start point.</param>
             <param name="endPoint">The end point.</param>
+            <param name="mapRotation">The angle of rotation of the map that contains the geometry shape.</param>
             <returns></returns>
         </member>
         <member name="T:Esri.ArcGISRuntime.Controls.DrawGeometryShape.ScaleMode">
@@ -4336,9 +4338,14 @@
                 Draw a shape that returns a <see cref="T:Esri.ArcGISRuntime.Geometry.Polygon"/>.
             </summary>
         </member>
+        <member name="F:Esri.ArcGISRuntime.Controls.DrawShape.Envelope">
+            <summary>
+            Draw a shape that returns a map-aligned <see cref="T:Esri.ArcGISRuntime.Geometry.Envelope"/>.
+            </summary>
+        </member>
         <member name="F:Esri.ArcGISRuntime.Controls.DrawShape.Rectangle">
             <summary>
-            Draw a shape that returns an <see cref="T:Esri.ArcGISRuntime.Geometry.Envelope"/>.
+            Draw a shape that returns a screen-aligned <see cref="T:Esri.ArcGISRuntime.Geometry.Polygon"/>.
             </summary>
         </member>
         <member name="F:Esri.ArcGISRuntime.Controls.DrawShape.Freehand">
@@ -10446,13 +10453,16 @@
         </member>
         <member name="T:Esri.ArcGISRuntime.Geometry.SimpleCache`2">
             <summary>
-             Simple cache for small numbers of items, using a value key to look up items.
-             This holds items by weak references. It does linear scans to find items, so not so good for large numbers.
-             To prevent ever growing has table it attempts to release empty weak references in Find and Add calls.
+             Thread safe cache for a small numbers of items.
             </summary>
+             <remarks>
+             This holds items by weak reference and attempts to reuse empty slots as objects are released
+             It's using a linear scans to find items, so this is fast for small numbers of items but not so good for large numbers.
+             To prevent constantly growing table it reuses empty weak references in Find and Add calls.
+             </remarks>
         </member>
         <member name="M:Esri.ArcGISRuntime.Geometry.SimpleCache`2.Find(`0)">
-            <summary>Tries to find the item with specified key in teh cache, if not found return null</summary>
+            <summary>Tries to find the item with specified key in the cache, if not found return null</summary>
         </member>
         <member name="M:Esri.ArcGISRuntime.Geometry.SimpleCache`2.Add(`0,`1)">
             <summary>
@@ -10465,6 +10475,11 @@
         <member name="M:Esri.ArcGISRuntime.Geometry.SimpleCache`2.Clear">
             <summary>
             Releases all the cached items
+            </summary>
+        </member>
+        <member name="T:Esri.ArcGISRuntime.Geometry.SimpleCache`2.CacheEntry">
+            <summary>
+            An internal class used to hold an entry in the cache
             </summary>
         </member>
         <member name="T:Esri.ArcGISRuntime.Geometry.SpatialReference">
@@ -10599,6 +10614,25 @@
         </member>
         <member name="P:Esri.ArcGISRuntime.Geometry.SpatialReference.Wkt">
             <summary>Gets the Well-known Text for this instance.</summary>
+        </member>
+        <member name="T:Esri.ArcGISRuntime.Geometry.SpatialReference.SRCache">
+            <summary>
+            Holds a cache of recently used spatial references
+            </summary>
+        </member>
+        <member name="M:Esri.ArcGISRuntime.Geometry.SpatialReference.SRCache.Find(Esri.ArcGISRuntime.Geometry.SRDef)">
+            <summary>
+            Given the definition of a spatial reference, it looks for an existing managed class that represents the same class,
+            returns null if its not found
+            </summary>
+            <param name="def">definition of a spatial reference</param>
+            <returns>An instance of a spatial reference if its in the cache</returns>
+        </member>
+        <member name="M:Esri.ArcGISRuntime.Geometry.SpatialReference.SRCache.Add(Esri.ArcGISRuntime.Geometry.SpatialReference)">
+            <summary>
+            Adds the existing spatial reference to the cache, if its already there its not added
+            </summary>
+            <param name="sr"></param>
         </member>
         <member name="T:Esri.ArcGISRuntime.Geometry.SpatialReferences">
             <summary>
@@ -11467,10 +11501,14 @@
             Copyright text.
             </summary>
         </member>
-        <member name="M:Esri.ArcGISRuntime.Layers.IQueryCopyright.QueryCopyright(Esri.ArcGISRuntime.Geometry.Envelope,System.Double)">
+        <member name="M:Esri.ArcGISRuntime.Layers.IQueryCopyright.QueryCopyright(Esri.ArcGISRuntime.Geometry.Envelope,System.Double,System.String)">
             <summary>
             Returns the copyright for the specified extent and the specified scale.
             </summary>
+            <param name="extent">The extent.</param>
+            <param name="scale">The scale.</param>
+            <param name="providersSeparator">In case the specified extent and scale is covered by multiple providers, 
+            the returned copyright text will use this value to separate the providers.</param>
         </member>
         <member name="P:Esri.ArcGISRuntime.Layers.IQueryCopyright.CopyrightChangesWithScale">
             <summary>
@@ -13837,6 +13875,11 @@
             Identifies the <see cref="P:Esri.ArcGISRuntime.Layers.FeatureLayer.Renderer"/> Dependency Property
             </summary>
         </member>
+        <member name="F:Esri.ArcGISRuntime.Layers.FeatureLayer.SelectionColorProperty">
+            <summary>
+            Identifies the <see cref="P:Esri.ArcGISRuntime.Layers.FeatureLayer.SelectionColor"/> Dependency Property
+            </summary>
+        </member>
         <member name="F:Esri.ArcGISRuntime.Layers.FeatureLayer.IsLabelingEnabledProperty">
             <summary>
             Identifies the <see cref="P:Esri.ArcGISRuntime.Layers.FeatureLayer.IsLabelingEnabled"/> dependency property
@@ -13939,6 +13982,12 @@
             <value>
             The renderer.
             </value>
+        </member>
+        <member name="P:Esri.ArcGISRuntime.Layers.FeatureLayer.SelectionColor">
+            <summary>
+            Gets or sets the color for selected graphics. 
+            </summary>
+            <remarks>The color is used to highlight graphics that have <see cref="P:Esri.ArcGISRuntime.Layers.Graphic.IsSelected"/> property set to true.</remarks>
         </member>
         <member name="P:Esri.ArcGISRuntime.Layers.FeatureLayer.FeatureTable">
             <summary>
