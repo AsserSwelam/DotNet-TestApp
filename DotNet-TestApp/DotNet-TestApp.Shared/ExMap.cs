@@ -48,6 +48,7 @@ namespace DotNet_TestApp
             _mapView.Map.Layers.Add(_myLocationLayer);
 
             _mapView.ExtentChanged += _mapView_ExtentChanged;
+            _mapView.NavigationCompleted += _mapView_NavigationCompleted;
 
             //////////Init DrawControl//////////
             //_drawControl = new DrawControl(_mapView);
@@ -80,114 +81,120 @@ namespace DotNet_TestApp
 
         }
 
-        void _mapView_ExtentChanged(object sender, EventArgs e)
+        void _mapView_NavigationCompleted(object sender, EventArgs e)
         {
-            
-            //////////////////Next and previous extents handling///////////////////
-            //if (e.OldExtent == null)
-            //{
-            //    _extentHistory.Add(e.NewExtent.Clone());
-            //    return;
-            //}
+            //////////////Next and previous extents handling///////////////////
+            if (_extentHistory.Count == 0)
+            {
+                _extentHistory.Add(_mapView.Extent.Clone());
+                return;
+            }
 
-            //if (_newExtent)
-            //{
-            //    _currentExtentIndex++;
+            if (_newExtent)
+            {
+                _currentExtentIndex++;
 
-            //    if (_extentHistory.Count - _currentExtentIndex > 0)
-            //        _extentHistory.RemoveRange(_currentExtentIndex, (_extentHistory.Count - _currentExtentIndex));
+                if (_extentHistory.Count - _currentExtentIndex > 0)
+                    _extentHistory.RemoveRange(_currentExtentIndex, (_extentHistory.Count - _currentExtentIndex));
 
-            //    _extentHistory.Add(e.NewExtent.Clone());
+                _extentHistory.Add(_mapView.Extent.Clone());
 
-            //    if (NavigateExtentDoneEvent != null)
-            //    {
-            //        NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
-            //        args.navigateExtentOn = NavigateExtentFocus.Both;
-            //        args.nextEnabled = false;
-            //        args.previousEnabled = true;
+                if (NavigateExtentDoneEvent != null)
+                {
+                    NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
+                    args.navigateExtentOn = NavigateExtentFocus.Both;
+                    args.nextEnabled = false;
+                    args.previousEnabled = true;
 
-            //        NavigateExtentDoneEvent(this, args);
-            //    }
-            //}
-            //else
-            //{
-            //    _newExtent = true;
-            //}
-
-            //////////////////////////////////////////////////////////////////////////
+                    NavigateExtentDoneEvent(this, args);
+                }
+            }
+            else
+            {
+                _newExtent = true;
+            }
+           
         }
 
-        //public void PrivousExtent()
-        //{
-        //    if (_currentExtentIndex != 0)
-        //    {
-        //        _currentExtentIndex--;
+        void _mapView_ExtentChanged(object sender, EventArgs e)
+        {
 
-        //        if (_currentExtentIndex == 0)
-        //        {
-        //            if (NavigateExtentDoneEvent != null)
-        //            {
-        //                NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
-        //                args.navigateExtentOn = NavigateExtentFocus.Previous;
-        //                args.previousEnabled = false;
+           
 
-        //                NavigateExtentDoneEvent(this, args);
-        //            }
-        //        }
+            ////////////////////////////////////////////////////////////////////////
+        }
 
-        //        _newExtent = false;
+        public void PrivousExtent()
+        {
+            if (_currentExtentIndex != 0)
+            {
+                _currentExtentIndex--;
 
-        //        _mapView.SetView(_extentHistory[_currentExtentIndex]);
+                if (_currentExtentIndex == 0)
+                {
+                    if (NavigateExtentDoneEvent != null)
+                    {
+                        NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
+                        args.navigateExtentOn = NavigateExtentFocus.Previous;
+                        args.previousEnabled = false;
 
-        //        if (NavigateExtentDoneEvent != null)
-        //        {
-        //            NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
-        //            args.navigateExtentOn = NavigateExtentFocus.Next;
-        //            args.nextEnabled = true;
+                        NavigateExtentDoneEvent(this, args);
+                    }
+                }
 
-        //            NavigateExtentDoneEvent(this, args);
-        //        }
+                _newExtent = false;
 
-        //    }
+                _mapView.SetView(_extentHistory[_currentExtentIndex]);
 
-        //}
+                if (NavigateExtentDoneEvent != null)
+                {
+                    NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
+                    args.navigateExtentOn = NavigateExtentFocus.Next;
+                    args.nextEnabled = true;
 
-        //public void NextExtent()
-        //{
-        //    if (_currentExtentIndex < _extentHistory.Count - 1)
-        //    {
-        //        _currentExtentIndex++;
+                    NavigateExtentDoneEvent(this, args);
+                }
 
-        //        if (_currentExtentIndex == (_extentHistory.Count - 1))
-        //        {
+            }
 
-        //            if (NavigateExtentDoneEvent != null)
-        //            {
-        //                NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
-        //                args.navigateExtentOn = NavigateExtentFocus.Next;
-        //                args.nextEnabled = false;
+        }
 
-        //                NavigateExtentDoneEvent(this, args);
-        //            }
-        //        }
+        public void NextExtent()
+        {
+            if (_currentExtentIndex < _extentHistory.Count - 1)
+            {
+                _currentExtentIndex++;
 
-        //        _newExtent = false;
+                if (_currentExtentIndex == (_extentHistory.Count - 1))
+                {
 
+                    if (NavigateExtentDoneEvent != null)
+                    {
+                        NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
+                        args.navigateExtentOn = NavigateExtentFocus.Next;
+                        args.nextEnabled = false;
 
-        //        _mapView.SetView(_extentHistory[_currentExtentIndex]);
+                        NavigateExtentDoneEvent(this, args);
+                    }
+                }
 
-        //        if (NavigateExtentDoneEvent != null)
-        //        {
-        //            NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
-        //            args.navigateExtentOn = NavigateExtentFocus.Previous;
-        //            args.previousEnabled = true;
-
-        //            NavigateExtentDoneEvent(this, args);
-        //        }
-        //    }
+                _newExtent = false;
 
 
-        //}
+                _mapView.SetView(_extentHistory[_currentExtentIndex]);
+
+                if (NavigateExtentDoneEvent != null)
+                {
+                    NavigateExtentDoneEventArgs args = new NavigateExtentDoneEventArgs();
+                    args.navigateExtentOn = NavigateExtentFocus.Previous;
+                    args.previousEnabled = true;
+
+                    NavigateExtentDoneEvent(this, args);
+                }
+            }
+
+
+        }
 
         public void SetDrawMode(GeoDrawMode mode)
         {

@@ -216,12 +216,12 @@ namespace DotNet_TestApp
 
         private void btnPrevExtent_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            //_exMap.PrivousExtent();
+            _exMap.PrivousExtent();
         }
 
         private void btnNextExtent_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            //_exMap.NextExtent();
+            _exMap.NextExtent();
         }
 
         private void btnAutoNav_MapNav_PointerPressed(object sender, PointerRoutedEventArgs e)

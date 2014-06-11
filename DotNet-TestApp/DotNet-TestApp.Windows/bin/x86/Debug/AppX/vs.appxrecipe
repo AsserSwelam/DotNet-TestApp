@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\applications\DotNet-TestApp\DotNet-TestApp\DotNet-TestApp.Windows\bin\x86\Debug\DotNet-TestApp.Windows.exe">
       <PackagePath>DotNet-TestApp.Windows.exe</PackagePath>
-      <Modified>2014-06-07T00:52:48.821</Modified>
+      <Modified>2014-06-09T18:22:02.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\ArcGIS SDKs\DotNet10.2.3\WindowsStore\References\CommonConfiguration\x86\Esri.ArcGISRuntime.dll">
       <PackagePath>Esri.ArcGISRuntime.dll</PackagePath>

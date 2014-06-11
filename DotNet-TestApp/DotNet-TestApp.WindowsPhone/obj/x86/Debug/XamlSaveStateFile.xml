@@ -1,8 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\applications\dotnet-testapp\dotnet-testapp\dotnet-testapp.windowsphone\obj\x86\debug\intermediatexaml\dotnet-testapp.windowsphone.exe" HashGuid="759d370a-54c3-4400-7de2-dd3cf90462d3" />
-    <ReferenceAssembly PathName="c:\program files (x86)\arcgis sdks\dotnet10.2.3\windowsphone\references\commonconfiguration\x86\esri.arcgisruntime.dll" HashGuid="60f8fec6-db47-a4ef-651b-bef679303a26" />
+    <LocalAssembly PathName="c:\applications\dotnet-testapp\dotnet-testapp\dotnet-testapp.windowsphone\obj\x86\debug\intermediatexaml\dotnet-testapp.windowsphone.exe" HashGuid="513920bd-5844-958d-280b-beafb200cc7f" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
-    <ReferenceAssembly PathName="c:\program files (x86)\arcgis sdks\dotnet10.2.3\windowsphone\references\commonconfiguration\neutral\runtimecorenet.winmd" HashGuid="d9b6ae05-4350-e8b3-0ab1-7c5fc153c238" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>
